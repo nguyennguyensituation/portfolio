@@ -1,0 +1,71 @@
+body {
+  font-family: "Abril Fatface", serif;
+  font-weight: 200;
+  color: darkgreen
+}
+
+header, figure, h1, h2, menu {
+  margin: 0;
+}
+
+main {
+  background-color: whitesmoke;
+  width: 720px;
+  height: auto;
+  margin: auto;
+  background-image: url("images/card-background.png"); 
+  padding: 40px;
+  border-radius: 30px;
+  margin-top: 30px;
+  display: grid;
+  grid-template:
+    'header header header header header header'
+    'links about about about about about'
+    'links nguyen-streak nguyen-streak nguyen-streak word-salad word-salad';
+    grid-gap: 10px;
+  padding: 10px;
+}
+
+header { 
+  grid-area: header; 
+  border-bottom: solid darkgreen 1px;
+  padding: 20px;
+  height: 100px;
+}
+
+figure, menu {
+  /* background-color: white; */
+}
+
+h1 {
+  font-family: "Gravitas One", serif;
+  letter-spacing: 2.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#links-container { 
+  grid-area: links;
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px auto;
+  border-right: solid darkgreen 1px;
+}
+
+
+#about-container { 
+  grid-area: about; 
+}
+
+#word-salad-container { 
+  grid-area: nguyen-streak;
+}
+
+#win-streak-container { 
+  grid-area: word-salad; 
+}
+
+
+
