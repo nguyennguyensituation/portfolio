@@ -4,32 +4,102 @@
     <title>Tram Nguyen - Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script id="case-study-item-template" type="text/x-handlebars">
+      {{#each items}}
+        <li>
+          <figure class="case-study-item">
+            <img src="images/{{imagePath}}" class="img-case-study" alt={{altText}}>
+            <figcaption>{{{caption}}}</figcaption>              
+          </figure>
+        </li>
+      {{/each}}
+      {{#if githubLink}}
+        <li>
+          <figure class="case-study-item">
+            <img src="images/github-icon.png" class="img-case-study" alt="Hands forming a frame around the Github logo">
+            <figcaption>For more information, <a href="{{githubLink}}" target="_blank">check out this project on Github</a>.</figcaption>              
+          </figure>
+        </li>
+      {{/if}}
+    </script>
+    <script id="link-template" type="text/x-handlebars">
+      {{#each links}}
+        <li>
+          <a href="{{url}}" class="tooltip" target="_blank">
+            <span class="tooltiptext">{{{tooltip}}}</span>
+            <img src="images/{{imagePath}}" class="img-icon" alt="">
+            <h3>{{title}}</h3>
+          </a>
+        </li>
+      {{/each}}
+    </script>
+    <script id="case-study-overview-template" type="text/x-handlebars">
+      {{#each cases}}
+        <section id="{{@key}}-container" class="case-study-overview">
+          <h3>Project: {{title}}</h3>
+          <p>{{{description}}}</p>
+          <a class="more" data-project="{{@key}}">Learn more</a>
+        </section>
+      {{/each}}
+    </script>
+    <script src="javascript/script.js" type="module"></script>
   </head>
-  <body>
+
+  <body>  
     <main>
       <header>
-        <h1>TRAM NGUYEN</h1>
+        <section id="title-container">
+          <div>
+            <h1>Tram Nguyen</h1>
+            <h3>Fullstack Software Developer / Chicago, IL</h3>
+          </div>
+        </section>       
+        <section id="contact-container">
+          <a href="mailto:designertvn@gmail.com" class="tooltip">
+            <img src="images/pigeon-icon.png" id="email-icon" alt="">
+            <h3>I have email.</h3>
+            <span class="tooltiptext">If you have email too, feel free to reach out.</span>
+          </a>
+        </section>
       </header>
 
-      <menu id="links-container">
-        <figure>
-          <a>TK Link</a>
-        </figure>
-        <figure>
-          <a>TK Link</a>
-        </figure>
-        <figure>
-          <a>TK Link</a>
-        </figure>
-        <figure>
-          <a>TK Link</a>
-        </figure>
-      </menu>
-      <figure id="about-container">About</figure>  
-      <figure id="word-salad-container">Word Salad</figure>
-      <figure id="nguyen-streak-container">Nguyen Streak</figure>
+      <nav id="links-container">
+        <ul></ul>
+      </nav>
+
+      <section id="about-container">
+        <h3>About Me</h3>
+
+        <h2 id="title-sentence">
+          I'm a <span class="strikethrough">Mascot Designer,</span> <span class="strikethrough">Illustrator,</span> <span class="strikethrough">Author,</span> <span class="strikethrough">UX Writer,</span> <span class="strikethrough">Product Manager,</span>
+          <br>Software Developer.
+        </h2>
+
+        <p>I chose the classic freelance mascot designer to software engineer career path, with a series of creative and tech jobs along the way. I've spent the last decade working in nearly every part of the tech ecosystem, from product strategy, design, and content creation; to building and supporting software.</p>
+
+        <p>The common thread among all these roles is that they gave me the opportunity to do the two things I love most:
+          <span class="tooltip" id="asterisk">solve problems
+            <span class="tooltiptext" id="problems-tooltip">
+            <b>A Few of My Favorite Problems</b><br><br>
+            1. <b>I once had to perform emergency mascot surgery</b> to ensure that a certain beer mascot would be ready in time for the Super Bowl.<br><br>
+            2. Frustrated with how confusing and inefficient my new hire training was, I learned how to code and <b>I built a learning app to replace the old training program</b>. It was eventually adopted by multiple departments and used by hundreds of employees at my company.
+            <br><br>
+            3. Tasked with teaching a team of non-devs Git, <b>I developed and led Git trainings based entirely around Post Malone's face tattoos</b>. For months after, you could find little cutouts of Post Malone's face scattered in every corner of the office.
+          </span>
+        </span> and build beautiful things out of nothing. I doesn't matter if I'm solving problems for a Fortune 500 company, a teammate, or an end user in Indiana&mdash;I always bring creativity, technical expertise, and good humor to every new project.</p>
+      </section>  
+
+      <div id="case-studies-container"></div>
     </main>
+
+    <div id="slideshow-modal">
+      <a id="close-modal-btn">&times;</a>
+      <ul id="case-study-slideshow"></ul>
+    </div>
+
+    <div id="overlay"></div>
   </body>
 </html>
