@@ -1,7 +1,5 @@
 const CASE_STUDIES = {
   "word-salad": {
-    "title": "Word Salad",
-    "description": "A Frankenstein's monster mash-up of the most popular games from <i>The New York Times</i>&mdash;the crossword, Connections, and Wordle...all at the same time.",
     "items": [
       {
         "imagePath":"word-salad/word-salad-title.png",
@@ -36,9 +34,7 @@ const CASE_STUDIES = {
     ],
     "githubLink":"https://github.com/nguyennguyensituation/word_salad"
   },
-  "nguyen-streak":{
-    "title": "Nguyen Streak",
-    "description" : "A tool to document work accomplishments, both daily achievements and major milestones. The app makes it easier to advocate for your career at review time or update your resume because you have the data to prove it",
+  "nguyen-streak": {
     "items": [
       {
         "imagePath":"nguyen-streak/nguyen-streak-title.png",
@@ -74,8 +70,6 @@ const CASE_STUDIES = {
     "githubLink":"https://github.com/nguyennguyensituation/win_on_rails"
   },
   "axel":{
-    "title": "AXEL",
-    "description": "An app for training and onboarding new employees. It hundreds of users across multiple departments at my company",
     "items": [
       {
         "imagePath":"axel/axel-title.png",

@@ -25,26 +25,6 @@
         </li>
       {{/if}}
     </script>
-    <script id="link-template" type="text/x-handlebars">
-      {{#each links}}
-        <li>
-          <a href="{{url}}" class="tooltip" target="_blank">
-            <span class="tooltiptext">{{{tooltip}}}</span>
-            <img src="images/{{imagePath}}" class="img-icon" alt="">
-            <h3>{{title}}</h3>
-          </a>
-        </li>
-      {{/each}}
-    </script>
-    <script id="case-study-overview-template" type="text/x-handlebars">
-      {{#each cases}}
-        <section id="{{@key}}-container" class="case-study-overview">
-          <h3>Project: {{title}}</h3>
-          <p>{{{description}}}</p>
-          <a class="more" data-project="{{@key}}">Learn more</a>
-        </section>
-      {{/each}}
-    </script>
     <script src="javascript/script.js" type="module"></script>
   </head>
 
@@ -67,7 +47,36 @@
       </header>
 
       <nav id="links-container">
-        <ul></ul>
+        <ul>
+          <li>
+            <a href="resources/tram_nguyen_resume_2024.pdf" class="tooltip" target="_blank">
+              <span class="tooltiptext">A summary of career highlights stuffed with as many action-oriented verbs as possible</span>
+              <img src="images/roman-bust-icon.png" class="img-icon" alt="">
+              <h3>CV</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/nguyennguyensituation" class="tooltip" target="_blank">
+              <span class="tooltiptext">A deep dive into some of my coding projects<br><br>(Despite the icon, there is no spaghetti here—I promise!)</span>
+              <img src="images/spaghetti-icon.png" class="img-icon" alt="">
+              <h3>Github</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://tramillustration.com/book.php" class="tooltip" target="_blank">
+              <span class="tooltiptext">I co-wrote a food memoir with absolutely no help from ChatGPT.<br><br>(There is spaghetti here—I promise!)</span>
+              <img src="images/pen-and-palate-icon.png" class="img-icon" alt="">
+              <h3>Book</h3>
+            </a>
+          </li>
+          <li>
+            <a href="http://tramillustration.com" class="tooltip" target="_blank">
+              <span class="tooltiptext">My editorial illustration portfolio</span>
+              <img src="images/lobster-icon.png" class="img-icon" alt="">
+              <h3>Illustration</h3>
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <section id="about-container">
@@ -92,7 +101,23 @@
         </span> and build beautiful things out of nothing. I doesn't matter if I'm solving problems for a Fortune 500 company, a teammate, or an end user in Indiana&mdash;I always bring creativity, technical expertise, and good humor to every new project.</p>
       </section>  
 
-      <div id="case-studies-container"></div>
+      <div id="case-studies-container">
+        <section id="word-salad-container" class="case-study-overview">
+          <h3>Project: Word Salad</h3>
+          <p>A Frankenstein's monster mash-up of the most popular games from <i>The New York Times</i>—the crossword, Connections, and Wordle...all at the same time.</p>
+          <a class="more" data-project="word-salad">Learn more</a>
+        </section>
+        <section id="nguyen-streak-container" class="case-study-overview">
+          <h3>Project: Nguyen Streak</h3>
+          <p>A tool to document work accomplishments, both daily achievements and major milestones. The app makes it easier to advocate for your career at review time or update your resume because you have the data to prove it</p>
+          <a class="more" data-project="nguyen-streak">Learn more</a>
+        </section>
+        <section id="axel-container" class="case-study-overview">
+          <h3>Project: AXEL</h3>
+          <p>An app for training and onboarding new employees. It hundreds of users across multiple departments at my company</p>
+          <a class="more" data-project="axel">Learn more</a>
+        </section>
+      </div>
     </main>
 
     <div id="slideshow-modal">

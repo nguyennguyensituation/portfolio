@@ -1,19 +1,6 @@
 import { CASE_STUDIES } from './modules/case-studies.js';
-import { LINKS } from './modules/links.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Populate links
-  const linksContainer = document.querySelector('#links-container ul');
-  const linkTemplate = Handlebars.compile(document.getElementById('link-template').innerHTML);
-
-  linksContainer.innerHTML = linkTemplate({ links: LINKS });
-
-  // Populate case studies
-  const caseStudiesContainer = document.getElementById('case-studies-container');
-  const caseStudyOverviewTemplate = Handlebars.compile(document.getElementById('case-study-overview-template').innerHTML);
-
-  caseStudiesContainer.innerHTML = caseStudyOverviewTemplate({ cases: CASE_STUDIES });
-
   // Show case study
   const caseStudyItemTemplate = Handlebars.compile(document.getElementById('case-study-item-template').innerHTML);
   const slideshow = document.getElementById('case-study-slideshow');
@@ -23,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const currentCaseStudy = CASE_STUDIES[btn.dataset.project];
 
-      slideshow.innerHTML = caseStudyItemTemplate({ items: currentCaseStudy.items, githubLink: currentCaseStudy.githubLink });
+      slideshow.innerHTML = caseStudyItemTemplate(currentCaseStudy);
       slideshow.scrollLeft = 0;
 
       toggleSlideshowModal();
