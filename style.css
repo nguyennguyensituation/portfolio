@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   color: #0000CC;
   font-family: "Prata", serif;
@@ -6,9 +10,12 @@ body {
   background-color: #FBEEE6;
   background-image: url("images/card-background.png"); 
   letter-spacing: 0.5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-header, figure, h1, h2, menu {
+header, body, figure, h1, h2, menu {
   margin: 0;
 }
 
@@ -166,7 +173,6 @@ header {
 
 main {
   width: 80%;
-  margin: auto;
   display: grid;
   grid-template:
   'header'
@@ -174,7 +180,6 @@ main {
   'case-studies'
   'links';
   grid-gap: 10px;
-  padding: 40px;    
   transition: 0.3s filter linear;
 }
 
@@ -301,7 +306,6 @@ main {
 }
 
 .img-case-study {
-  height: 300px;
   filter: drop-shadow(-3px 15px 15px rgba(0 7 133 / 0.2));
 }
 
@@ -311,12 +315,36 @@ main {
   width: 380px;
   font-size: 15px;
   letter-spacing: 0.5px;
+  height: 100%;
 }
 
 /* MEDIA QUERIES */
 
+/* Touch devices */
+@media (hover: none) {
+  .tooltip .tooltiptext {
+    display: none;
+  }
+
+  #asterisk {
+    text-decoration: none;
+  }
+}
+
+/* Extra extra small devices (phones, 480px and down) */
+@media all and (max-width: 480px) {
+  .img-case-study {
+    height: 200px;
+  }
+
+  .case-study-item figcaption {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   h1 {
     font-size: 48px;
   }
@@ -328,10 +356,18 @@ main {
   #title-sentence {
     font-size: 1.25em;
   }
+
+  .img-case-study {
+    height: 300px;
+  }
+
+  .case-study-item figcaption {
+    width: 400px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media all and (min-width: 600px) {
   h1 {
     font-size: 60px;
   }
@@ -344,14 +380,13 @@ main {
     font-size: 1.5em;
   }
 
-  .case-study-item figcaption {
-    width: 400px;
-    font-size: 16px;
+  .img-case-study {
+    height: 300px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   header { 
     display: grid;
     grid-template: 'title contact';
@@ -434,7 +469,7 @@ main {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media all and (min-width: 992px) {
   header {
     grid-template: 'title title title title title title contact';
   }
