@@ -39,7 +39,7 @@ const CASE_STUDIES = {
       {
         "imagePath":"nguyen-streak/nguyen-streak-title.png",
         "altText":"Nguyen Streak logo",
-        "caption": "Nguyen Streak (pronounced <i>[win strēk]</i>) is an fullstack application to track and organize your wins.<br><br>I built it using Ruby on Rails and vanilla JS."
+        "caption": "Nguyen Streak (pronounced <i>[win strēk]</i>) is an fullstack application to track and organize your wins. The app makes it easier to advocate for your career at review time or update your resume because you have the data to prove it.<br><br>I built it using Ruby on Rails and vanilla JS."
       },
       {
         "imagePath":"nguyen-streak/full-board.png",
@@ -74,7 +74,7 @@ const CASE_STUDIES = {
       {
         "imagePath":"axel/axel-title.png",
         "altText":"AXEL logo",
-        "caption": "I designed and built the frontend for AXEL, a learning app used to train and onboard employees.<br><br>For three years, I was the product owner and frontend developer for AXEL. It was built with PHP, MySQL, and vanilla JS."
+        "caption": "I designed and built the frontend for AXEL, a learning app used to train and onboard hundreds of employees across multiple departments.<br><br>For three years, I was the product owner and frontend developer for AXEL. It was built with PHP, MySQL, and vanilla JS."
       },
       {
         "imagePath":"axel/progress-board.png",
