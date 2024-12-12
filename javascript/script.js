@@ -1,8 +1,16 @@
 import { CASE_STUDIES } from './modules/case-studies.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Load template
+  let caseStudyItemTemplate;
+
+  fetch('./javascript/templates/case-study-item.hbs')
+    .then(response => response.text())
+    .then(text => {
+      caseStudyItemTemplate = Handlebars.compile(text);
+    })
+
   // Show case study
-  const caseStudyItemTemplate = Handlebars.compile(document.getElementById('case-study-item-template').innerHTML);
   const slideshow = document.getElementById('case-study-slideshow');
   const caseStudyBtns = document.querySelectorAll('.case-study-overview a');
 

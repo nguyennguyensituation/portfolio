@@ -8,24 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script id="case-study-item-template" type="text/x-handlebars">
-      {{#each items}}
-        <li>
-          <figure class="case-study-item">
-            <img src="images/{{imagePath}}" class="img-case-study" alt={{altText}}>
-            <figcaption>{{{caption}}}</figcaption>              
-          </figure>
-        </li>
-      {{/each}}
-      {{#if githubLink}}
-        <li>
-          <figure class="case-study-item">
-            <img src="images/github-icon.png" class="img-case-study" alt="Hands forming a frame around the Github logo">
-            <figcaption>For more information, <a href="{{githubLink}}" target="_blank">check out this project on Github</a>.</figcaption>              
-          </figure>
-        </li>
-      {{/if}}
-    </script>
     <script src="javascript/script.js" type="module"></script>
   </head>
 

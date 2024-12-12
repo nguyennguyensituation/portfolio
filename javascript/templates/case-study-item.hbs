@@ -1,0 +1,16 @@
+{{#each items}}
+  <li>
+    <figure class="case-study-item">
+      <img src="images/{{imagePath}}" class="img-case-study" alt={{altText}}>
+      <figcaption>{{{caption}}}</figcaption>              
+    </figure>
+  </li>
+{{/each}}
+{{#if githubLink}}
+  <li>
+    <figure class="case-study-item">
+      <img src="images/github-icon.png" class="img-case-study" alt="Hands forming a frame around the Github logo">
+      <figcaption>For more information, <a href="{{githubLink}}" target="_blank">check out this project on Github</a>.</figcaption>              
+    </figure>
+  </li>
+{{/if}}
