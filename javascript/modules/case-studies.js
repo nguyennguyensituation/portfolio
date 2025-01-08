@@ -4,17 +4,17 @@ const CASE_STUDIES = {
       {
         "imagePath":"word-salad/word-salad-title.png",
         "altText":"Word Salad logo",
-        "caption":"Word Salad is a loving homage to the most popular puzzles from <i>The New York Times</i>. It combines Connections, Wordle, and the crossword into a single game.<br><br>I built this app using vanilla JS."
+        "caption":"Built with reusable React components, Word Salad features a responsive interface that easily transitions between different puzzle modes within the same session, providing real-time feedback and scoring. The application is fully responsive and designed to be intuitive and easy-to-play.<br><br>Built with: TypeScript, React, Next.js"
       },
       {
         "imagePath":"word-salad/game_board.png",
         "altText":"Game board with sixteen cards that contain a word or a puzzle",
-        "caption":"The board is comprised of 16 cards. Some of the cards already have words on them. Some of the cards contain a puzzle.<br><br>Your first goal is to solve all the puzzles to reveal all the words."
+        "caption":"The board contains 16 cards. Some of the cards have words displayed on them. The rest of the cards contain a puzzle that you'll need to solve to reveal the word."
       },
       {
         "imagePath":"word-salad/wordle_or_crossword.png",
         "altText":"Completed Wordle puzzle and crossword puzzle",
-        "caption":"Click on a blank card to open a puzzle. The puzzle will be either a Wordle or a crossword. Solve the puzzle to reveal the word.<br><br>The app keeps track of the words you've guessed and won't let you submit the same word more than once. The word you submit must also be in the Wordle dictionary."
+        "caption":"Select a blank card to open a puzzle. The puzzle will be either a Wordle or a crossword. Solve the puzzle to reveal the word.<br><br>The game keeps track of the words you've guessed and won't let you submit the same word more than once. The word you submit must also be in the Wordle dictionary."
       },
       {
         "imagePath":"word-salad/selected_cards.png",
@@ -32,14 +32,14 @@ const CASE_STUDIES = {
         "caption":"Continue selecting groups of four cards until you've found all the categories."
       }
     ],
-    "githubLink":"https://github.com/nguyennguyensituation/word_salad"
+    "githubLink":"https://github.com/nguyennguyensituation/word_salad_react"
   },
   "nguyen-streak": {
     "items": [
       {
         "imagePath":"nguyen-streak/nguyen-streak-title.png",
         "altText":"Nguyen Streak logo",
-        "caption": "Nguyen Streak (pronounced <i>[win strēk]</i>) is an fullstack application to track and organize your wins. The app makes it easier to advocate for your career at review time or update your resume because you have the data to prove it.<br><br>I built it using Ruby on Rails and vanilla JS."
+        "caption": "Nguyen Streak (pronounced <i>[win strēk]</i>) is a content management system to track and organize work accomplishments. The app makes it easier to advocate for your career at review time or update your resume because you have the data to prove it. Features secure user authentication with encrypted passwords, a database with robust CRUD operations, and an integrated search and filtering system.<br><br>v2: Ruby, Rails, SQLite3; v1: Ruby, Sinatra, PostgreSQL"
       },
       {
         "imagePath":"nguyen-streak/full-board.png",
@@ -64,7 +64,7 @@ const CASE_STUDIES = {
       {
         "imagePath":"nguyen-streak/my-account.png",
         "altText":"App screen displaying summary of wins by category",
-        "caption":"You can see a summary of your wins by category and your account profile information."
+        "caption":"You can see a summary of your wins by category and your account profile information. Account authentication with encrypted passwords."
       }
     ],
     "githubLink":"https://github.com/nguyennguyensituation/win_on_rails"
@@ -74,7 +74,7 @@ const CASE_STUDIES = {
       {
         "imagePath":"axel/axel-title.png",
         "altText":"AXEL logo",
-        "caption": "I designed and built the frontend for AXEL, a learning app used to train and onboard hundreds of employees across multiple departments.<br><br>For three years, I was the product owner and frontend developer for AXEL. It was built with PHP, MySQL, and vanilla JS."
+        "caption": "I built the front-end and designed the UI for AXEL, a learning management system that was used to train hundreds of employees across multiple departments. It was a central repository for training materials, allowing students to view course materials, take interactive quizzes, and track their learning progress.<br></br>Admins were able to upload and manage course materials and access anonymized quiz data in real time.<br></br>Built with: Vanilla JavaScript, jQuery, PHP, MySQL"
       },
       {
         "imagePath":"axel/progress-board.png",
@@ -94,7 +94,7 @@ const CASE_STUDIES = {
       {
         "imagePath":"axel/class-quiz.png",
         "altText":"Menu containing class list, online Git class, and multiple choice quiz",
-        "caption": "AXEL was the primary tool for new hire training and continuing education for multiple departments. There were dozens of online classes as well as interactive quizzes.<br><br>The training team was able to see the (anonymized) quiz data and adjust the training materials in real time."
+        "caption": "AXEL was the primary tool for new hire training and continuing education for multiple departments. There were dozens of online classes as well as interactive quizzes.<br><br>The training team was able to see the (anonymized) training data, make smarter, more data-driven decisions, and adjust the course materials in real time."
       }
     ]
   }
